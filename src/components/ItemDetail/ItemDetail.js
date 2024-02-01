@@ -2,26 +2,26 @@ import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 
 
-const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+const ItemDetail = ({ nombre, imagen, categoria, descripcion, precio, stock }) => {
     return (
         <article className="CardItem">
             <header className="Header">
                 <h2 className="ItemHeader">
-                    {name}
+                    {nombre}
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImg" />
+                <img src={imagen} alt={nombre} className="ItemImg" />
             </picture>
             <section>
                 <p className="Info">
-                    Categoria: {category}
+                    Categoria: {categoria}
                 </p>
                 <p className="Info">
-                    Descripción: {description}
+                    Descripción: {descripcion}
                 </p>
                 <p className="Info">
-                    Precio: ${price}
+                    Precio: ${precio}
                 </p>
             </section>
             <footer className="ItemFooter">
