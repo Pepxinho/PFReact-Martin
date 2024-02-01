@@ -1,0 +1,33 @@
+.CardItem{
+    border: solid black 1px ;
+    border-radius: 10px;
+}
+
+.ItemHeader{
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.ItemPic{
+    display: flex;
+    justify-content: center;
+}
+.ItemImg{
+    width: 150px;
+}
+
+.Info{
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.priceColor{
+    color: green;
+}
+
+.stockColor{
+    color: rgb(169, 106, 252);
+}

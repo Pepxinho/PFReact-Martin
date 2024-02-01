@@ -8,7 +8,7 @@ import "./styles/styles.css";
 function App() {
 
     return (
-        <main>
+        
             <BrowserRouter>
                 <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
                     <NavBar />
@@ -22,7 +22,7 @@ function App() {
 
 
 
-        </main>
+            
 
     )
 
