@@ -15,7 +15,7 @@ function App() {
                 </nav>
                 <Routes>
                     <Route path="/" element={<ItemListContainer saludo={"Bienvenidos a EM-Componentes"} />} />
-                    <Route path="/item/:id" element={<ItemDetailContainer />} />
+                    <Route path="/item/:id" element={<ItemListContainer />} />
                     <Route path="*" element={<h1>EROR 404 NOT FOUND</h1>} />
                 </Routes>
             </BrowserRouter>
