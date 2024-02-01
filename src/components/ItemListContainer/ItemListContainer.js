@@ -10,12 +10,11 @@ import { db } from "../../services/firebase/firebaseConfig";
 
 const ItemListContainer = ({ saludo }) => {
     const [products, setProducts] = useState([])
-    const {loading, setLoading} = useState(true)
+    
 
     const { categoryId } = useParams()
 
     useEffect(() => {
-        setLoading(true)
 
        const collectionRef = categoryId ? query(collection(db, "items"), where("categoria", "==", categoryId)) : collection(db, "items")
 
@@ -28,9 +27,6 @@ const ItemListContainer = ({ saludo }) => {
        })
        .catch(error => {
         console.error(error)
-       })
-       .finally(() => {
-        setLoading(false)
        })
        
     }, [categoryId])
