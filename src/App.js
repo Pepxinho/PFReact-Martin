@@ -9,7 +9,7 @@ import "./styles/styles.css";
 function App() {
 
     return (
-        
+        <div>
             <BrowserRouter>
             
                 <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -18,15 +18,15 @@ function App() {
                 <Routes>
                     <Route path="/" element={<ItemListContainer saludo={"Bienvenidos a EM-Componentes"} />} />
                     <Route path="/item/:id" element={<ItemDetailContainer />} />
-                    <Route path="/item" element={<ItemDetailContainer />} />
-                    <Route path="/item/:categoria" element={<ItemListContainer saludo={"Bienvenidos a EM-Componentes"} />} />
+                    <Route path="/products" element={<ItemListContainer />} />
+                    <Route path="/products/:categoria" element={<ItemListContainer saludo={"Bienvenidos a EM-Componentes"} />} />
                     <Route path="/carrito" element={<Cart />} />
                     <Route path="*" element={<h1>EROR 404 NOT FOUND</h1>} />
                 </Routes>
                 
             </BrowserRouter>
 
-
+            </div>
 
             
 

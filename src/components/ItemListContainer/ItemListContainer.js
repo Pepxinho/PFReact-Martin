@@ -3,7 +3,7 @@ import ItemList from "../ItemList/ItemList";
 
 import { useParams } from "react-router-dom";
 
-import { getDocs, collection, } from "firebase/firestore";
+import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../services/firebase/firebaseConfig";
 
 
@@ -17,6 +17,7 @@ const ItemListContainer = ({ saludo }) => {
     useEffect(() => {
 
         const productosRef = collection(db, "items")
+
         getDocs(productosRef).then((resp) => {
 
             setProducts(

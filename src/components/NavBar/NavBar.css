@@ -1,0 +1,16 @@
+.navList{
+    
+}
+
+
+.link-text{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.link-text:hover{
+    color: gray;
+    font-size: 22px;
+}
