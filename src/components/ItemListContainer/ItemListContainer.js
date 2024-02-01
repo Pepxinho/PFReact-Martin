@@ -19,14 +19,11 @@ const ItemListContainer = ({ saludo }) => {
        const collectionRef = categoryId ? query(collection(db, "items"), where("categoria", "==", categoryId)) : collection(db, "items")
 
        getDocs(collectionRef).then(response => {
-        const productsAdapted = response.doc.map(doc =>{
+        const productsAdapted = response.docs.map(doc =>{
             const data = doc.data()
             return {id: doc.id, ...data }
         })
         setProducts(productsAdapted)
-       })
-       .catch(error => {
-        console.error(error)
        })
        
     }, [categoryId])
