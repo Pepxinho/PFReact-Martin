@@ -8,23 +8,21 @@ import { db } from "../../services/firebase/firebaseConfig";
 
 
 const ItemDetailContainer = () =>{
-    const [product, setProduct] = useState(null)
+    const [item, setItem] = useState(null)
 
-    const {ItemId} = useParams()
+    const id = useParams().id
 
     useEffect(() => {
-        const docRef = doc(db, "items", ItemId)
-
-        getDoc(docRef).then(response => {
-            const data = response.data()
-            const productAdapted = { id: response.id, ...data }
-            setProduct(productAdapted)
+        const docRef = doc(db, "items", id)
+        getDoc(docRef).then(resp => {
+             setItem( {...resp.data(), id: resp.id})
+            
         })
-    }, [ItemId])
+    }, [id])
     
     return (
-        <div className="ItemListContainer">
-            <ItemDetail {...product} />
+        <div className="container">
+            {item && <ItemDetail item={item} />}
         </div>
     )
 

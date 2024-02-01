@@ -12,7 +12,7 @@ const NavBar = () => {
 <div className="col-6">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
         <li className="nav-item">
-          <button className="btn">Procesadores</button>
+         <Link to={"/item/:categoria"}>  <button className="btn">Procesadores</button></Link>
         </li>
         <li className="nav-item">
           <button className="btn">Motherboards</button>

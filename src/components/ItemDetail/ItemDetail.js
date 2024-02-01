@@ -4,7 +4,8 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ nombre, imagen, categoria, descripcion, precio, stock }) => {
     return (
-        <article className="CardItem">
+        
+        <article className="CardItem col-4">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {nombre}
@@ -28,6 +29,7 @@ const ItemDetail = ({ nombre, imagen, categoria, descripcion, precio, stock }) =
                 </p>
             </section>
         </article>
+        
     )
 }
 
